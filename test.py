@@ -22,22 +22,23 @@
 #     find_sum(numbers)
 #     print(f'[MAIN] [FINISHED]: {time.time() - start_time}')
 
-import unittest
+# import unittest
 
-def sum_func(a, b):
-    return a + b
+# def sum_func(a, b):
+#     return a + b
 
-class FuncTestCase(unittest.TestCase):
-    def test_sum_func(self):
-        a = [1, 2, 3]
-        b = [1, 2, 3]
-        c = [2, 4, 6]
-        # print(zip(a, b, c))
-        for _a, _b, _c in zip(a, b, c):
-            with self.subTest():
-                self.assertEqual(sum_func(_a, _b), _c)
-        # self.assertEqual(1, 1)
+# class FuncTestCase(unittest.TestCase):
+#     def test_sum_func(self):
+#         a = [1, 2, 3]
+#         b = [1, 2, 3]
+#         c = [2, 4, 6]
+#         # print(zip(a, b, c))
+#         for _a, _b, _c in zip(a, b, c):
+#             with self.subTest():
+#                 self.assertEqual(sum_func(_a, _b), _c)
+#         # self.assertEqual(1, 1)
 
 
-if __name__ == "__main__":
-    unittest.main()
+# if __name__ == "__main__":
+#     unittest.main()
+
