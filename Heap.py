@@ -6,9 +6,9 @@ class Heap:
         l = idx * 2 + 1
         r = idx * 2 + 2
         center_element = idx
-        if l < self.__sizeof__() and self.__arr[l] < self.__arr[center_element]:
+        if l < self.__sizeof__() and self.__arr[l] > self.__arr[center_element]:
             center_element = l
-        if r < self.__sizeof__() and self.__arr[r] < self.__arr[center_element]:
+        if r < self.__sizeof__() and self.__arr[r] > self.__arr[center_element]:
             center_element = r
 
         if center_element != idx:
@@ -28,7 +28,7 @@ class Heap:
         self.__arr.append(value)
         idx = self.__sizeof__() - 1
 
-        while idx != 0 and self.__arr[self._parent(idx)] > self.__arr[idx]:
+        while idx != 0 and self.__arr[self._parent(idx)] < self.__arr[idx]:
             self.__arr[idx], self.__arr[self._parent(idx)] = self.__arr[self._parent(idx)], self.__arr[idx]
             idx = self._parent(idx)
 
